@@ -1,0 +1,7 @@
+$bg-theme-light: #dbdbdb;
+$bg-theme-dark: #222;
+
+:export {
+  bgDark: $bg-theme-dark;
+  bgLight: $bg-theme-light;
+}
