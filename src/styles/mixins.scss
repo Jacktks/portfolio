@@ -1,0 +1,48 @@
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flexBox(
+  $flex: flex,
+  $align: null,
+  $justify: null,
+  $direction: null,
+  $wrap: null,
+  $order: null,
+  $row-gap: null,
+  $col-gap: null
+) {
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  order: $order;
+  row-gap: $row-gap;
+  column-gap: $col-gap;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    } //1800px
+  }
+}

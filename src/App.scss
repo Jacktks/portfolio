@@ -2,13 +2,26 @@
 
 .App {
   text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  transition: background 0.5s;
+
   &.theme {
     &--light {
-      background-color: $bg-theme-light;
+      background: $bg-theme-light;
     }
 
     &--dark {
-      background-color: $bg-theme-dark;
+      background: $bg-theme-dark;
+    }
+  }
+
+  .text {
+    &--light {
+      color: $color-text-light;
+    }
+    &--dark {
+      color: $color-text-dark;
     }
   }
 }

@@ -1,7 +1,11 @@
 $bg-theme-light: #dbdbdb;
 $bg-theme-dark: #222;
 
-:export {
-  bgDark: $bg-theme-dark;
-  bgLight: $bg-theme-light;
-}
+$color-text-light: #455174;
+$color-text-dark: #fff;
+
+// Fontsize
+$font-size-small: 12px;
+$font-size-primary: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;

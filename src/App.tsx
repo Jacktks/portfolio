@@ -11,13 +11,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-      <div
-        className={`App theme--${theme}`}
-        style={{
-          minWidth: '100vw',
-          minHeight: '100vh',
-        }}
-      >
+      <div className={`App theme--${theme}`}>
         <Home />
       </div>
     </ThemeContext.Provider>
