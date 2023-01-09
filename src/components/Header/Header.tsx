@@ -1,8 +1,11 @@
 import {useContext, useState} from 'react';
-import {HeaderMenu, MENU_HEADER} from '../../constants';
 import {ThemeContext} from '../../context/theme-context';
 
-import './header.scss';
+import {MENU_HEADER} from './constants';
+import {HeaderMenu} from './types';
+import {THEME} from '../../types';
+
+import './styles/header.scss';
 
 import LightIcon from '../../assets/icons/icon-light.svg';
 import DarkIcon from '../../assets/icons/icon-dark.svg';
@@ -10,8 +13,6 @@ import MobileNavDarkIcon from '../../assets/icons/icon-mobile-header-dark.svg';
 import MobileNavLightIcon from '../../assets/icons/icon-mobile-header-light.svg';
 import CloseIconDark from '../../assets/icons/icon-close-dark.svg';
 import CloseIconLight from '../../assets/icons/icon-close-light.svg';
-
-import {THEME} from '../../constants/theme';
 
 const Header = () => {
   const {theme, setTheme} = useContext(ThemeContext);

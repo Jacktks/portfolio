@@ -1,0 +1,71 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.about {
+  min-height: 600px;
+  padding: 80px;
+
+  .info {
+    @include flexBox($align: center, $justify: space-between);
+    &Left {
+      @include flexBox($direction: column);
+
+      > button {
+        font-family: 'DM Sans';
+        width: 150px;
+        height: 48px;
+        background: rgba(69, 81, 116, 0.8);
+        border-radius: 5px;
+        font-size: $font-size-medium;
+        font-weight: 500;
+        border: unset;
+        @include flexBox($align: center, $justify: center);
+        cursor: pointer;
+
+        > a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+
+      .position {
+        font-size: $font-size-large;
+        font-weight: 500;
+        line-height: 26px;
+        color: $color-text-base;
+        font-family: 'DM Sans';
+        padding: 22px 0px;
+        display: flex;
+      }
+
+      .info {
+        font-weight: 700;
+        font-size: 53px;
+        font-family: 'DM Sans';
+        line-height: 69px;
+      }
+
+      .list-social {
+        margin-top: 43px;
+        display: flex;
+
+        > a {
+          margin-right: 33px;
+        }
+      }
+    }
+    &Right {
+      width: 502px;
+      height: 502px;
+      background: rgba(30, 29, 29, 0.2);
+      border: 1px solid #a6bcfa;
+      border-radius: 50%;
+      @include flexBox($align: center, $justify: center);
+
+      > img {
+        margin-left: 40px;
+        user-select: none;
+      }
+    }
+  }
+}

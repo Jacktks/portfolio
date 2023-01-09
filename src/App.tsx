@@ -3,9 +3,12 @@ import './styles/variables.scss';
 import './App.scss';
 import {ThemeContext} from './context/theme-context';
 import Home from './pages/Home';
+import {THEME} from './types';
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme') || THEME.LIGHT,
+  );
 
   useEffect(() => localStorage.setItem('theme', theme), [theme]);
 

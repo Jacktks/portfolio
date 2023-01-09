@@ -1,0 +1,118 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.header {
+  min-height: 78px;
+  width: calc(100% - 120px);
+  padding: 0px 60px;
+  z-index: 1;
+  @include flexBox($align: center, $justify: space-between);
+
+  &.box-shadow {
+    &--light {
+      box-shadow: 0px 0px 10.0547px rgba(0, 0, 0, 0.1);
+    }
+
+    &--dark {
+      box-shadow: 0px 0px 10.0547px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .list-menu {
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    > span {
+      font-family: 'Roboto';
+      font-size: $font-size-medium;
+      font-weight: 400;
+      font-family: 'Roboto';
+      margin-right: 58px;
+      cursor: pointer;
+    }
+  }
+
+  .icon {
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
+    @include flexBox($align: center, $justify: center);
+    transition: visibility 0.75s, opacity 0.75s linear;
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .mobile-header-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 1;
+    transition: visibility 0.75s, opacity 0.75s linear;
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  .menu-mobile {
+    display: none;
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 0vh;
+    left: 0px;
+    transition: height 0.5s ease-in;
+    @include respond(tab-port) {
+      @include flexBox($direction: column, $justify: center);
+    }
+
+    &.theme {
+      &--dark {
+        background: rgba(57, 56, 56, 1);
+      }
+      &--light {
+        background: #fff;
+      }
+    }
+
+    &.open {
+      height: 100vh;
+      z-index: 10;
+
+      > span {
+        opacity: 1;
+        transition: visibility 0.75s, opacity 0.75s linear;
+      }
+
+      > img {
+        opacity: 1;
+        transition: visibility 0.75s, opacity 0.75s linear;
+      }
+    }
+
+    > span {
+      margin-top: 60px;
+      font-size: $font-size-large;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    > img {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 32px;
+      height: 32px;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}
