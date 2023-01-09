@@ -3,7 +3,7 @@ import {ThemeContext} from '../../context/theme-context';
 import './styles/about.scss';
 import YoungManImage from '../../assets/icons/young-man-image.svg';
 import {LIST_PROGRAMING_LANGUAGE, LIST_SOCIAL_NETWORK} from './constants';
-import Language from './components/language';
+import Tab from '../Tab/Tab';
 
 const About = () => {
   const {theme} = useContext(ThemeContext);
@@ -35,11 +35,18 @@ const About = () => {
         </div>
       </div>
 
-      {/* <div className="programing-language">
-        {LIST_PROGRAMING_LANGUAGE.map((item) => (
-          <Language name={item.name} image={item.icon} />
+      <div className="programing-language">
+        {LIST_PROGRAMING_LANGUAGE.map((item, idx) => (
+          <div
+            style={{
+              marginLeft: idx > 0 ? '12px' : 0,
+              marginTop: '60px',
+            }}
+          >
+            <Tab name={item.name} image={item.icon} />
+          </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -5,10 +5,21 @@
   min-height: 600px;
   padding: 80px;
 
+  @include respond(tab-port) {
+    padding: 10px;
+  }
+
   .info {
     @include flexBox($align: center, $justify: space-between);
-    &Left {
+    @include respond(tab-port) {
       @include flexBox($direction: column);
+    }
+
+    &Left {
+      @include flexBox($direction: column, $justify: flex-start);
+      @include respond(tab-port) {
+        @include flexBox($align: center);
+      }
 
       > button {
         font-family: 'DM Sans';
@@ -43,6 +54,9 @@
         font-size: 53px;
         font-family: 'DM Sans';
         line-height: 69px;
+        @include respond(tab-port) {
+          font-size: 30px;
+        }
       }
 
       .list-social {
@@ -61,11 +75,25 @@
       border: 1px solid #a6bcfa;
       border-radius: 50%;
       @include flexBox($align: center, $justify: center);
+      @include respond(tab-port) {
+        width: 300px;
+        height: 300px;
+        margin-top: 70px;
+      }
 
       > img {
+        width: 100%;
         margin-left: 40px;
         user-select: none;
       }
+    }
+  }
+
+  .programing-language {
+    margin-top: 113px;
+    @include flexBox($align: center, $justify: center, $wrap: wrap);
+    @include respond(tab-port) {
+      padding: 40px;
     }
   }
 }

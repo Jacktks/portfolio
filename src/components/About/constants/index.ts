@@ -8,6 +8,7 @@ import htmlIcon from '../../../assets/icons/programming/html.svg';
 import javascriptIcon from '../../../assets/icons/programming/javascript.svg';
 import pythonIcon from '../../../assets/icons/programming/python.svg';
 import reactIcon from '../../../assets/icons/programming/react.svg';
+import vueIcon from '../../../assets/icons/programming/vue.svg';
 import sassIcon from '../../../assets/icons/programming/sass.svg';
 
 import {PROGRAMING_LANGUAGE, SOCIAL_NETWORK} from '../types';
@@ -46,7 +47,7 @@ export const LIST_PROGRAMING_LANGUAGE: PROGRAMING_LANGUAGE[] = [
   },
   {
     name: 'VueJs',
-    icon: '',
+    icon: vueIcon,
   },
   {
     name: 'Python',
