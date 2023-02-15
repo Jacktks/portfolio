@@ -12,8 +12,7 @@ const About = () => {
     <div className="about">
       <div className="info">
         <div className="infoLeft">
-          <span className={`info text--${theme}`}>Hi, I am</span>
-          <span className={`info text--${theme}`}>Nguyen Van Tri</span>
+          <span className={`info text--${theme}`}>Hi, I am Tri</span>
           <span className="position">Frontend Developer</span>
           <button type="button">
             <a href="hello" target="_blank">

@@ -24,7 +24,7 @@ const Header = () => {
   const onOpen = () => setIsOpenMobile(() => !isOpenMobile);
 
   return (
-    <div className={`header box-shadow--${theme}`}>
+    <div className={`header header--${theme}`}>
       <div className="list-menu">
         {MENU_HEADER.map((item: HeaderMenu, idx) => (
           <span key={idx} className={`text--${theme}`}>
