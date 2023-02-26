@@ -14,7 +14,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-      <div className={`App theme--${theme}`}>
+      <div id="App" className={`App theme--${theme}`}>
         <Home />
       </div>
     </ThemeContext.Provider>

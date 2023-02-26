@@ -3,15 +3,16 @@
 
 .about {
   min-height: 600px;
-  padding: 80px;
 
   @include respond(tab-port) {
-    padding: 10px;
+    padding: unset;
   }
 
   .info {
+    padding: 80px;
     @include flexBox($align: center, $justify: space-between);
     @include respond(tab-port) {
+      padding: 10px;
       @include flexBox($direction: column);
     }
 
@@ -54,6 +55,7 @@
         font-size: 53px;
         font-family: 'DM Sans';
         line-height: 69px;
+        padding: unset;
         @include respond(tab-port) {
           font-size: 30px;
         }
@@ -91,9 +93,10 @@
 
   .programing-language {
     margin-top: 113px;
-    @include flexBox($align: center, $justify: center, $wrap: wrap);
-    @include respond(tab-port) {
-      padding: 40px;
+    width: 100%;
+
+    .slick-initialized .slick-slide {
+      @include flexBox($align: center, $justify: center);
     }
   }
 }

@@ -17,23 +17,24 @@ export const LIST_SOCIAL_NETWORK: SOCIAL_NETWORK[] = [
   {
     icon: facebookIcon,
     name: 'facebook',
-    link: 'https://twitter.com/jacktks',
+    link: 'https://fb.com/jacktks.sagittarius',
   },
   {
     icon: twitterIcon,
     name: 'twitter',
-    link: 'https://fb.com/jacktks.sagittarius',
+    link: 'https://twitter.com/jacktks_',
   },
   {
     icon: instagramIcon,
     name: 'instagram',
-    link: 'https://instagram.com/jacktks',
+    link: 'https://www.instagram.com/jacktks.sagittarius/',
   },
   {
     icon: linkedInIcon,
     name: 'linkedin',
-    link: 'https://instagram.com/jacktks',
+    link: 'https://www.linkedin.com/in/van-tri-987799183',
   },
+  
 ];
 
 export const LIST_PROGRAMING_LANGUAGE: PROGRAMING_LANGUAGE[] = [

@@ -13,13 +13,13 @@
   @include flexBox($align: center, $justify: space-between);
 
   &--light {
-    background: rgb(219, 219, 219, 0.9);
+    background: rgba(219, 219, 219, 0.9);
     box-shadow: 0px 0px 10.0547px rgba(0, 0, 0, 0.1);
   }
 
   &--dark {
     box-shadow: 0px 0px 10.0547px rgba(255, 255, 255, 0.1);
-    background: rgb(34, 34, 34, 0.9);
+    background: rgba(34, 34, 34, 0.9);
   }
 
   .list-menu {

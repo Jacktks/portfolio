@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {ThemeContext} from '../../context/theme-context';
 
 import {MENU_HEADER} from './constants';
@@ -17,6 +17,14 @@ import CloseIconLight from '../../assets/icons/icon-close-light.svg';
 const Header = () => {
   const {theme, setTheme} = useContext(ThemeContext);
   const [isOpenMobile, setIsOpenMobile] = useState(false);
+
+  useEffect(() => {
+    const appElm = document.querySelector('#App');
+    appElm?.setAttribute(
+      'style',
+      `overflow: ${isOpenMobile ? 'hidden' : 'auto'}`,
+    );
+  }, [isOpenMobile]);
 
   const onChangeTheme = () =>
     setTheme(theme === THEME.DARK ? THEME.LIGHT : THEME.DARK);
