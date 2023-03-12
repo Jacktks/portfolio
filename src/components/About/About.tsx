@@ -4,7 +4,8 @@ import Slider from 'react-slick';
 import {ThemeContext} from '../../context/theme-context';
 
 import {LIST_PROGRAMING_LANGUAGE, LIST_SOCIAL_NETWORK} from './constants';
-import YoungManImage from '../../assets/icons/young-man-image.svg';
+
+import {ReactComponent as YoungManImage} from '../../assets/icons/young-man-image.svg';
 
 import Tab from '../Tab/Tab';
 import './styles/about.scss';
@@ -71,8 +72,8 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="info">
-        <div className="infoLeft">
+      <div className="about__info">
+        <div className="info-left">
           <span className={`info text--${theme}`}>Hi, I am Tri</span>
           <span className="position">Frontend Developer</span>
           <button type="button">
@@ -99,12 +100,12 @@ const About = () => {
           </div>
         </div>
 
-        <div className="infoRight">
-          <img src={YoungManImage} alt="me" />
+        <div className="info-right">
+          <YoungManImage />
         </div>
       </div>
 
-      <div className="programing-language">
+      <div className="about__programing">
         <Slider {...settingsSlider}>
           {LIST_PROGRAMING_LANGUAGE.map((item, idx) => (
             <div

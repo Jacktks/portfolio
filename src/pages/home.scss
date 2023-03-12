@@ -1,0 +1,68 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.home-page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  max-width: 100%;
+  transition: height 0.5s ease-in-out;
+
+  @include respond(tab-port) {
+    .show {
+      overflow: hidden;
+      height: 0;
+    }
+  }
+
+  .home-page__menu {
+    display: none;
+    z-index: 20;
+    position: fixed;
+    top: -100vh;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    transition: top 0.75s ease-in-out;
+    overflow: hidden;
+    @include respond(tab-port) {
+      gap: 60px;
+      @include flexBox($direction: column, $align: center, $justify: center);
+    }
+
+    &.theme {
+      &--dark {
+        background: rgba(57, 56, 56, 1);
+      }
+      &--light {
+        background: #fff;
+      }
+    }
+
+    &.show {
+      top: 0;
+      z-index: 10;
+
+      > img {
+        opacity: 1;
+        transition: visibility 0.75s, opacity 0.75s linear;
+      }
+    }
+
+    > span {
+      font-size: $font-size-large;
+      cursor: pointer;
+    }
+
+    > img {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 32px;
+      height: 32px;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}

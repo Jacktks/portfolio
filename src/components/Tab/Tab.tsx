@@ -12,7 +12,7 @@ const Tab = (props: Props) => {
 
   return (
     <div className="tab">
-      <div className={`tab-image tab-image--${theme}`}>
+      <div className={`tab__image tab__image--${theme}`}>
         <img src={`${props.image}`} alt={`${props.name}`} />
       </div>
       <span> {props.name}</span>

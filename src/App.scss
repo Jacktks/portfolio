@@ -1,11 +1,9 @@
 @import './styles/variables.scss';
+@import './styles/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Roboto&display=swap');
 
 .App {
-  text-align: center;
-  min-width: 100vw;
-  height: 100vh;
   transition: background 0.5s;
 
   &.theme {

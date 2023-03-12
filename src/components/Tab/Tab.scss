@@ -30,14 +30,14 @@
   }
 
   &:hover {
-    .tab-image {
+    .tab__image {
       > img {
         top: -10px;
       }
     }
   }
 
-  &-image {
+  &__image {
     position: relative;
     width: 55px;
     height: 55px;

@@ -22,7 +22,7 @@
     background: rgba(34, 34, 34, 0.9);
   }
 
-  .list-menu {
+  .header__menu {
     @include respond(tab-port) {
       display: none;
     }
@@ -37,7 +37,7 @@
     }
   }
 
-  .icon {
+  .header__icon {
     z-index: 1;
     opacity: 1;
     cursor: pointer;
@@ -49,7 +49,7 @@
     }
   }
 
-  .mobile-header-icon {
+  .header__icon-mobile {
     display: none;
     cursor: pointer;
     z-index: 1;
@@ -62,55 +62,6 @@
 
     @include respond(tab-port) {
       display: block;
-    }
-  }
-
-  .menu-mobile {
-    display: none;
-    z-index: 0;
-    position: absolute;
-    top: -100vh;
-    width: 100vw;
-    height: 100vh;
-    left: 0px;
-    transition: top 0.5s ease-in;
-    @include respond(tab-port) {
-      @include flexBox($direction: column, $justify: center);
-    }
-
-    &.theme {
-      &--dark {
-        background: rgba(57, 56, 56, 1);
-      }
-      &--light {
-        background: #fff;
-      }
-    }
-
-    &.open {
-      top: 0;
-      z-index: 10;
-
-      > img {
-        opacity: 1;
-        transition: visibility 0.75s, opacity 0.75s linear;
-      }
-    }
-
-    > span {
-      margin-top: 60px;
-      font-size: $font-size-large;
-      cursor: pointer;
-    }
-
-    > img {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      width: 32px;
-      height: 32px;
-      opacity: 0;
-      cursor: pointer;
     }
   }
 }
