@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .language {
   position: relative;
@@ -13,7 +13,7 @@
   @include flexBox($align: center, $justify: center);
 
   &:hover {
-    .language-image {
+    &__image {
       top: -50px;
     }
   }
@@ -25,7 +25,7 @@
     margin-top: 10px;
   }
 
-  .language-image {
+  &__image {
     position: absolute;
     top: -40px;
     left: 33%;

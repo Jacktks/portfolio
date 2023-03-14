@@ -1,0 +1,66 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.hire-me {
+  width: calc(100% - 160px);
+  padding: 80px;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-weight: $font-weight-primary;
+    font-size: 48px;
+    margin-bottom: 100px;
+
+    @include respond(tab-port) {
+      font-size: 32px;
+      margin-bottom: 30px;
+      margin-top: 80px;
+    }
+  }
+
+  &__items {
+    width: 100%;
+    @include flexBox($justify: space-between, $wrap: wrap);
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    @include flexBox($direction: column, $align: center);
+  }
+
+  &__img {
+    width: 98px;
+    height: 98px;
+    position: relative;
+    border-radius: 50%;
+    @include flexBox($align: center, $justify: center);
+
+    &--light {
+      background: rgba(34, 34, 34, 0.1);
+    }
+    &--dark {
+      background: rgba(69, 81, 116, 0.8);
+    }
+  }
+
+  &__label {
+    margin: 51px 0 12px 0;
+    font-weight: $font-weight-primary;
+    font-size: 24px;
+  }
+
+  &__content {
+    width: 240px;
+    text-align: center;
+    line-height: 30px;
+  }
+}

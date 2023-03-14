@@ -1,16 +1,21 @@
-import About from '../components/About/About';
-import Header from '../components/Header/Header';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import {useContext, useState} from 'react';
-import {MENU_HEADER} from '../components/Header/constants';
-import {HeaderMenu} from '../components/Header/types';
-import {ThemeContext} from '../context/theme-context';
-import {THEME} from '../types';
-import CloseIconDark from '../assets/icons/icon-close-dark.svg';
-import CloseIconLight from '../assets/icons/icon-close-light.svg';
+
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+
+import {onScrollTo} from 'utils';
+import {waitFor} from 'utils/async';
+import {THEME} from 'types';
+
+import CloseIconDark from 'assets/icons/icon-close-dark.svg';
+import CloseIconLight from 'assets/icons/icon-close-light.svg';
+import {MENU_HEADER} from 'components/Header/constants';
+import {HeaderMenu} from 'components/Header/types';
+import {ThemeContext} from 'context/theme-context';
+
+import About from 'components/About/About';
+import Header from 'components/Header/Header';
+import HireMe from 'components/HireMe/HireMe';
 
 import './home.scss';
 
@@ -20,11 +25,18 @@ const Home = () => {
 
   const onOpenHeaderMobile = () => setIsOpenMobile(() => !isOpenMobile);
 
+  const onScrollToTab = async (tab: String) => {
+    setIsOpenMobile(false);
+    await waitFor(500);
+    onScrollTo(tab);
+  };
+
   return (
     <div className="home-page">
       <div className={`${isOpenMobile ? `show` : ''}`}>
         <Header isOpenMobile={isOpenMobile} onOpen={onOpenHeaderMobile} />
         <About />
+        <HireMe />
       </div>
       <div
         className={`home-page__menu theme--${theme} ${
@@ -32,7 +44,11 @@ const Home = () => {
         }`}
       >
         {MENU_HEADER.map((item: HeaderMenu, idx) => (
-          <span key={idx} className={`text--${theme}`}>
+          <span
+            key={idx}
+            className={`text--${theme}`}
+            onClick={() => onScrollToTab(item.key)}
+          >
             {item.name}
           </span>
         ))}

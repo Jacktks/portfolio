@@ -1,15 +1,16 @@
 import {useContext, useState, useEffect} from 'react';
 import Slider from 'react-slick';
 
-import {ThemeContext} from '../../context/theme-context';
+import {ThemeContext} from 'context/theme-context';
 
 import {LIST_PROGRAMING_LANGUAGE, LIST_SOCIAL_NETWORK} from './constants';
 
-import {ReactComponent as YoungManImage} from '../../assets/icons/young-man-image.svg';
+import {ReactComponent as YoungManImage} from 'assets/icons/young-man-image.svg';
 
-import Tab from '../Tab/Tab';
 import './styles/about.scss';
-import {useWindowSize} from '../../hooks/useWindowSize';
+import {useWindowSize} from 'hooks/useWindowSize';
+import Tab from 'components/Tab/Tab';
+import {KEY_HEADER} from 'components/Header/types';
 
 const About = () => {
   const {theme} = useContext(ThemeContext);
@@ -71,18 +72,28 @@ const About = () => {
   };
 
   return (
-    <div className="about">
+    <div className="about" id={KEY_HEADER.ABOUT}>
       <div className="about__info">
-        <div className="info-left">
-          <span className={`info text--${theme}`}>Hi, I am Tri</span>
-          <span className="position">Frontend Developer</span>
+        <div className="info__left">
+          <span className={`title text--${theme}`}>Hi guys, I'm Tri</span>
+          <span className="position">
+            I'm a Software Engineer at&nbsp;
+            <a
+              className="position__company"
+              href="https://www.paradox.ai/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Paradox
+            </a>
+          </span>
           <button type="button">
             <a href="hello" target="_blank">
               Download CV
             </a>
           </button>
 
-          <div className="list-social">
+          <div className="socials">
             {LIST_SOCIAL_NETWORK.map((item, idx) => (
               <a
                 key={idx}
@@ -100,7 +111,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="info-right">
+        <div className="info__right">
           <YoungManImage />
         </div>
       </div>

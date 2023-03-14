@@ -1,9 +1,8 @@
 import {useEffect, useState} from 'react';
-import './styles/variables.scss';
-import './App.scss';
 import {ThemeContext} from './context/theme-context';
 import Home from './pages/Home';
 import {THEME} from './types';
+import './App.scss';
 
 function App() {
   const [theme, setTheme] = useState(

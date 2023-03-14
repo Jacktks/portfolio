@@ -1,12 +1,11 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .tab {
   position: relative;
   width: 161px;
   min-height: 150px;
   cursor: pointer;
-
   @include flexBox($direction: column, $align: center, $justify: space-around);
 
   &::before {

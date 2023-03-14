@@ -1,5 +1,5 @@
-@import '../../../styles/mixins.scss';
-@import '../../../styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
 
 .about {
   min-height: 600px;
@@ -17,14 +17,13 @@
     }
 
     .info {
-      &-left {
+      &__left {
         @include flexBox($direction: column, $justify: flex-start);
         @include respond(tab-port) {
           @include flexBox($align: center);
         }
 
         > button {
-          font-family: 'DM Sans';
           width: 150px;
           height: 48px;
           background: rgba(69, 81, 116, 0.8);
@@ -46,15 +45,20 @@
           font-weight: 500;
           line-height: 26px;
           color: $color-text-base;
-          font-family: 'DM Sans';
           padding: 22px 0px;
           display: flex;
+          max-width: 450px;
+
+          &__company {
+            text-decoration: none;
+            color: $color-text-base;
+            font-weight: $font-weight-primary;
+          }
         }
 
-        .info {
+        .title {
           font-weight: 700;
           font-size: 53px;
-          font-family: 'DM Sans';
           line-height: 69px;
           padding: unset;
           @include respond(tab-port) {
@@ -62,7 +66,7 @@
           }
         }
 
-        .list-social {
+        .socials {
           margin-top: 43px;
           display: flex;
 
@@ -72,7 +76,7 @@
         }
       }
 
-      &-right {
+      &__right {
         width: 502px;
         height: 502px;
         background: rgba(30, 29, 29, 0.2);
