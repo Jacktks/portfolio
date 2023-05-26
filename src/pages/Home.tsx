@@ -22,12 +22,25 @@ import './home.scss';
 const Home = () => {
   const {theme} = useContext(ThemeContext);
   const [isOpenMobile, setIsOpenMobile] = useState(false);
+  const [positionScroll, setPositionScroll] = useState(0);
 
-  const onOpenHeaderMobile = () => setIsOpenMobile(() => !isOpenMobile);
+  const onOpenHeaderMobile = async () => {
+    if (isOpenMobile) {
+      setIsOpenMobile(() => !isOpenMobile);
+      await waitFor(100);
+      window.scrollTo({
+        top: positionScroll,
+      });
+    } else {
+      const scrollPosition = window.scrollY;
+      setPositionScroll(scrollPosition);
+      setIsOpenMobile(() => !isOpenMobile);
+    }
+  };
 
   const onScrollToTab = async (tab: String) => {
-    setIsOpenMobile(false);
-    await waitFor(500);
+    onOpenHeaderMobile();
+    await waitFor(700);
     onScrollTo(tab);
   };
 

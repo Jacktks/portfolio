@@ -9,10 +9,9 @@ import {HeaderMenu} from './types';
 
 import './styles/header.scss';
 
-import DarkIcon from 'assets/icons/icon-dark.svg';
-import LightIcon from 'assets/icons/icon-light.svg';
 import MobileNavDarkIcon from 'assets/icons/icon-mobile-header-dark.svg';
 import MobileNavLightIcon from 'assets/icons/icon-mobile-header-light.svg';
+import Toggle from './components/Toggle';
 
 interface Props {
   isOpenMobile: Boolean;
@@ -20,12 +19,9 @@ interface Props {
 }
 
 const Header = (props: Props) => {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
   const onOpen = () => props.onOpen();
-
-  const onChangeTheme = () =>
-    setTheme(theme === THEME.DARK ? THEME.LIGHT : THEME.DARK);
 
   const onScrollToTab = (tab: String) => onScrollTo(tab);
 
@@ -44,12 +40,7 @@ const Header = (props: Props) => {
           ))}
         </div>
 
-        <img
-          className={`header__icDesktop ${props.isOpenMobile ? 'hidden' : ''}`}
-          src={theme === THEME.LIGHT ? LightIcon : DarkIcon}
-          alt="light-icon"
-          onClick={onChangeTheme}
-        />
+        <Toggle />
 
         <img
           className={`header__icMobile  ${props.isOpenMobile ? 'hidden' : ''}`}

@@ -10,7 +10,7 @@ export const MENU_HEADER: HeaderMenu[] = [
     key: KEY_HEADER.WORKS,
   },
   {
-    name: 'Contact',
-    key: KEY_HEADER.CONTACT_ME,
+    name: 'Hire Me',
+    key: KEY_HEADER.HIRE_ME,
   },
 ];

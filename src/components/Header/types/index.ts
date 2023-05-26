@@ -1,7 +1,7 @@
 export enum KEY_HEADER {
   ABOUT = 'about',
   WORKS = 'works',
-  CONTACT_ME = 'contact',
+  HIRE_ME = 'hire_me',
 }
 
 export interface HeaderMenu {

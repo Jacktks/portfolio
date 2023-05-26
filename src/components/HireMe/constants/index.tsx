@@ -10,24 +10,24 @@ export const LIST_HIRE_ME: HireMe[] = [
     logo: Communicate,
     label: 'Communicative',
     content:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ',
+      'I engage in effective communication with both customers and project team members to collaboratively develop an optimal product system.',
   },
   {
     logo: Professional,
     label: 'Professional',
     content:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ',
+      'Striving for professionalism is the cornerstone of delivering the best products, and it remains my guiding principle.',
   },
   {
     logo: Collaborative,
     label: 'Collaborative',
     content:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ',
+      'I actively collaborate and synergize with all team members in the company to create exceptional projects, ensuring utmost customer satisfaction. ',
   },
   {
     logo: Favorite,
     label: `Client's Favorite`,
     content:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ',
+      'By means of my working methods and the high-quality products I produce, I strive to elicit customer delight and satisfaction.',
   },
 ];
