@@ -10,20 +10,6 @@
     padding: 0 !important;
   }
 
-  &__title {
-    width: 100%;
-    text-align: center;
-    font-weight: $font-weight-primary;
-    font-size: 48px;
-    margin-bottom: 100px;
-
-    @include respond(tab-port) {
-      font-size: 32px;
-      margin-bottom: 30px;
-      margin-top: 80px;
-    }
-  }
-
   &__items {
     width: 100%;
     @include flexBox($justify: space-between, $wrap: wrap);

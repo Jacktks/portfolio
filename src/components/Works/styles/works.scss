@@ -1,0 +1,67 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.works {
+  padding: 80px;
+  width: calc(100% - 160px);
+
+  @include respond(tab-port) {
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .vertical-timeline::before {
+    background: $color-text-light;
+  }
+
+  .vertical-timeline-element-icon {
+    box-shadow: none;
+
+    > svg {
+      fill: $color-text-dark;
+    }
+  }
+
+  .vertical-timeline-element-date {
+    font-weight: $font-weight-primary;
+    font-size: $font-size-large !important;
+
+    @include respond(tab-port) {
+      color: $color-text-dark !important;
+    }
+  }
+
+  &--dark {
+    display: block;
+    .vertical-timeline-element-date {
+      color: $color-text-dark;
+    }
+  }
+
+  &--light {
+    display: block;
+    .vertical-timeline-element-date {
+      color: $color-text-light;
+    }
+  }
+
+  .regency {
+    margin: 0;
+    font-size: $font-size-primary;
+    font-style: italic;
+  }
+
+  .description {
+    margin-top: 10px !important;
+    display: block;
+    text-decoration: none;
+
+    &:link,
+    &:active,
+    &:link:active,
+    &:visited,
+    &:visited:active {
+      color: $color-text-dark;
+    }
+  }
+}

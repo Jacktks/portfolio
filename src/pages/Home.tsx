@@ -18,6 +18,7 @@ import Header from 'components/Header/Header';
 import HireMe from 'components/HireMe/HireMe';
 
 import './home.scss';
+import Works from 'components/Works/Works';
 
 const Home = () => {
   const {theme} = useContext(ThemeContext);
@@ -49,6 +50,7 @@ const Home = () => {
       <div className={`${isOpenMobile ? `show` : ''}`}>
         <Header isOpenMobile={isOpenMobile} onOpen={onOpenHeaderMobile} />
         <About />
+        <Works />
         <HireMe />
       </div>
       <div

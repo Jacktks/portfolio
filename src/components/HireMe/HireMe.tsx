@@ -3,6 +3,7 @@ import {ThemeContext} from 'context/theme-context';
 import {LIST_HIRE_ME} from './constants';
 import './styles/hireme.scss';
 import {KEY_HEADER} from 'components/Header/types';
+import Title from 'components/Title/Title';
 
 const HireMe = () => {
   const {theme} = useContext(ThemeContext);
@@ -10,7 +11,7 @@ const HireMe = () => {
   return (
     <>
       <div className="hire-me" id={KEY_HEADER.HIRE_ME}>
-        <p className={`hire-me__title text--${theme}`}>Why Hire Me</p>
+        <Title title="Why Hire Me" />
         <div className="hire-me__items">
           {LIST_HIRE_ME.map((item) => (
             <div key={`${item.label}`} className="hire-me__item">

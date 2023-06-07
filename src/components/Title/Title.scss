@@ -1,0 +1,16 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-weight: $font-weight-primary;
+  font-size: 48px;
+  margin-bottom: 100px;
+
+  @include respond(tab-port) {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+}
