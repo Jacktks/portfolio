@@ -12,6 +12,7 @@
 
   &__items {
     width: 100%;
+    gap: 20px;
     @include flexBox($justify: space-between, $wrap: wrap);
 
     @include respond(tab-port) {

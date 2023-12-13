@@ -23,6 +23,7 @@ const About = () => {
     centerMode: true,
     infinite: true,
     speed: 500,
+    autoplaySpeed: 1500,
     arrows: false,
     centerPadding: '10px',
     slidesToShow: 1,

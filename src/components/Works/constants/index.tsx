@@ -43,9 +43,8 @@ export const TIME_LINE: TimeLineItem[] = [
     iconStyle: {...rootIconStyle},
     icon: <Education />,
     title: 'University',
-    description: 'University of Science and Education (University of Danang)',
-    regency:
-      'Alumnus (Bachelor of Science in Physics (International Standard Program))',
+    description: 'Danang University of Education',
+    regency: `Student (Bachelor's in Physics)`,
   },
   {
     className: 'vertical-timeline-element--work',
@@ -55,8 +54,8 @@ export const TIME_LINE: TimeLineItem[] = [
     iconStyle: {...rootIconStyle},
     icon: <Education />,
     title: 'University',
-    description: 'University of Science and Education (University of Danang)',
-    regency: 'Alumnus (Infomatics Teacher Education - GPA: 3.27 / 4.0)',
+    description: 'Danang University of Education',
+    regency: 'Student (Teacher Education in Informatics) - GPA: 3.27 / 4.0',
   },
   {
     className: 'vertical-timeline-element--work',
