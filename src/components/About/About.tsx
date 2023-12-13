@@ -75,7 +75,7 @@ const About = () => {
     <div className="about" id={KEY_HEADER.ABOUT}>
       <div className="about__info">
         <div className="info__left">
-          <span className={`title text--${theme}`}>Hi guys, I'm Tri</span>
+          <span className={`title text--${theme}`}>Hi bro, I'm Tri</span>
           <span className="position">
             I'm a Software Engineer at&nbsp;
             <a
