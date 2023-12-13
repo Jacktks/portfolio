@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.a5ff5fa1.css",
-    "main.js": "./static/js/main.9d1bd40d.js",
-    "static/js/787.74e1e567.chunk.js": "./static/js/787.74e1e567.chunk.js",
+    "main.css": "./static/css/main.7ecabbf9.css",
+    "main.js": "./static/js/main.937a3ecc.js",
+    "static/js/27.65626c54.chunk.js": "./static/js/27.65626c54.chunk.js",
     "static/media/young-man-image.svg": "./static/media/young-man-image.f4391fe39b6722ac07e49670cc0c31f7.svg",
     "static/media/instagram.svg": "./static/media/instagram.5966cdd785f7b7e2b42f9732f972183c.svg",
     "static/media/professional.svg": "./static/media/professional.665b4cbc6afad24973966393953e62b3.svg",
@@ -29,13 +29,10 @@
     "static/media/vue.svg": "./static/media/vue.faed46fc299f91828484217c641e0eb1.svg",
     "static/media/facebook.svg": "./static/media/facebook.95fcf25920e83c450d777783a3d59edf.svg",
     "static/media/icon-mobile-header-light.svg": "./static/media/icon-mobile-header-light.f23dc2b6ee9fcef988326432e25abddf.svg",
-    "static/media/icon-mobile-header-dark.svg": "./static/media/icon-mobile-header-dark.bf5f62aa8f117efcaf20ffe8c3e54397.svg",
-    "main.a5ff5fa1.css.map": "./static/css/main.a5ff5fa1.css.map",
-    "main.9d1bd40d.js.map": "./static/js/main.9d1bd40d.js.map",
-    "787.74e1e567.chunk.js.map": "./static/js/787.74e1e567.chunk.js.map"
+    "static/media/icon-mobile-header-dark.svg": "./static/media/icon-mobile-header-dark.bf5f62aa8f117efcaf20ffe8c3e54397.svg"
   },
   "entrypoints": [
-    "static/css/main.a5ff5fa1.css",
-    "static/js/main.9d1bd40d.js"
+    "static/css/main.7ecabbf9.css",
+    "static/js/main.937a3ecc.js"
   ]
 }
